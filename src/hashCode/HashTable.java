@@ -171,4 +171,14 @@ public class HashTable<K,V> {
 
     }
 
+
+    /**
+     * hash表 均复杂度O(1) 但丢失了顺序性
+     * 但是 二分搜索树 有顺序性，可以非常快的排序，最大值最小值
+     * 既有集合，映射---底层链表、数，hash表
+     * 有序集合，有序映射---平衡树结构  treeMap treeSet
+     * 无序集合，无序映射：hashMap hashSet
+     */
+
+
 }
