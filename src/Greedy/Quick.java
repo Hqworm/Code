@@ -6,6 +6,7 @@ package Greedy;
  */
 
 public class Quick {
+    //public  static  final int a=0;
     public static int[] sort(int arr[],int low,int high){
         /**
          *  5   1   7   2   8   9   4   10
@@ -13,6 +14,7 @@ public class Quick {
         int L=low;
         int H=high;
         int key=arr[low];//改进可以改进key的大小的策略
+
         // 比key 放在key右边，否则放在左边
         while(L<H){//如果L H没有碰面，则没有遍历玩
             while(L < H && arr[H]>=key)//H 从数组的最后一个元素向前遍历，如果比key大，则H--

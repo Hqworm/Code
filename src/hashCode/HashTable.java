@@ -6,6 +6,10 @@ import java.util.TreeMap;
   在 public class RBTree< K extends Comparable<K,V>>{}因必须具有可比较性所以要比较
  */
 public class HashTable<K,V> {
+    /**
+     * private TreeMap<K, V>[] hashTable 自定义的hashTable 是 treeMap，但是他是要求key Comparable 的
+     * HashTable<K,V> 但是自己定义的K不需要 Comparable  产生矛盾
+     */
     //在java 中 object实现了hashcode()方法  所以对k不需操作   需要特别操作则进行覆盖
     private TreeMap<K, V>[] hashTable;//
     private int M;//hashTable的长度，一个合适的素数
@@ -94,6 +98,7 @@ public class HashTable<K,V> {
      */
     public V remove(K key){
         TreeMap<K,V> map=hashTable[hash(key)];
+
         V ret=null;
         if(map.containsKey(key)){//删除
             ret=map.remove(map);
